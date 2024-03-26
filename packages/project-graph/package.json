@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "glob": "10.3.10"
+  },
+  "devDependencies": {
+    "@depschecker/tsconfig": "workspace:*",
+    "@types/node": "20.11.30"
+  },
+  "name": "@depschecker/project-graph"
+}
