@@ -1,6 +1,5 @@
 import path from 'path'
-import fs from 'fs'
-import { getPackage, loadJson, resolvePackageJson } from './utils'
+import { fileExists, getPackage, loadJson, resolvePackageJson } from './utils'
 import type { Package, PackageJson } from './types'
 import { getProjectRoot } from './getProjectRoot'
 import { globSync } from 'glob'
@@ -19,7 +18,7 @@ export const generateProjectGraph = (
   const graph = globSync(workspaces, { cwd: root })
     .map(workspace => path.join(root, workspace, 'package.json'))
     .concat(rootPackageJsonPath)
-    .filter(fs.existsSync)
+    .filter(fileExists)
     .map(packageJsonPath => {
       const packageJson = require(packageJsonPath) as PackageJson
       const packagePath = path.dirname(packageJsonPath)

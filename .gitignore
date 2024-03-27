@@ -9,3 +9,6 @@ node_modules
 
 # Misc
 .DS_Store
+
+# Generated
+dist

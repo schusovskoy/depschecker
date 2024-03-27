@@ -1,10 +1,10 @@
 import path from 'path'
-import fs from 'fs'
 import type { PackageJson } from './types'
+import { fileExists } from './utils'
 
 const getProjectRootImpl = (cwd: string, firstFoundRoot?: string): string => {
   const packageJsonPath = path.join(cwd, 'package.json')
-  const packageJsonExists = fs.existsSync(packageJsonPath)
+  const packageJsonExists = fileExists(packageJsonPath)
 
   if (packageJsonExists) {
     const packageJson = require(packageJsonPath) as PackageJson
@@ -24,5 +24,7 @@ const getProjectRootImpl = (cwd: string, firstFoundRoot?: string): string => {
   return getProjectRootImpl(parentFolder, root)
 }
 
-export const getProjectRoot = (cwd = process.cwd()): string =>
-  getProjectRootImpl(cwd)
+export const getProjectRoot = (cwd = process.cwd()): string => {
+  const absoluteCwd = path.resolve(cwd)
+  return getProjectRootImpl(absoluteCwd)
+}

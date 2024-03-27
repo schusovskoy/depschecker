@@ -1,6 +1,15 @@
 import fs from 'fs'
 import type { Package } from './types'
 
+export const fileExists = (path: string): boolean => {
+  try {
+    fs.accessSync(path)
+    return true
+  } catch {
+    return false
+  }
+}
+
 export const getPackage = (
   name: string,
   graph: Record<string, Package>,

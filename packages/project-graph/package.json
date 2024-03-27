@@ -6,5 +6,11 @@
     "@depschecker/tsconfig": "workspace:*",
     "@types/node": "20.11.30"
   },
-  "name": "@depschecker/project-graph"
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "name": "@depschecker/project-graph",
+  "scripts": {
+    "build": "npx tsup src/index.ts --dts --format cjs,esm"
+  },
+  "types": "dist/index.d.ts"
 }
