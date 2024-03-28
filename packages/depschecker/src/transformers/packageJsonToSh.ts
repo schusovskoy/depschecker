@@ -1,4 +1,4 @@
-import type { PackageJson } from '@depschecker/project-graph'
+import type { PackageJson } from 'project-graph'
 import type { Transformer } from '../types'
 
 export const packageJsonToSh: Transformer = file => {

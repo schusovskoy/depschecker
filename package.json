@@ -15,14 +15,14 @@
     ]
   },
   "devDependencies": {
-    "@depschecker/depschecker": "workspace:*",
+    "depschecker": "workspace:*",
     "eslint": "8.57.0",
     "prettier": "3.2.5",
     "tsup": "8.0.2",
     "typescript": "5.4.3",
     "typescript-eslint": "7.3.1"
   },
-  "name": "depschecker",
+  "name": "root",
   "packageManager": "yarn@4.1.1",
   "private": true,
   "workspaces": [

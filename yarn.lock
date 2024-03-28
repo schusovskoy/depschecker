@@ -144,40 +144,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@depschecker/depschecker@workspace:*, @depschecker/depschecker@workspace:packages/depschecker":
-  version: 0.0.0-use.local
-  resolution: "@depschecker/depschecker@workspace:packages/depschecker"
-  dependencies:
-    "@babel/parser": "npm:7.24.1"
-    "@babel/traverse": "npm:7.24.1"
-    "@babel/types": "npm:7.24.0"
-    "@depschecker/project-graph": "workspace:*"
-    "@depschecker/tsconfig": "workspace:*"
-    "@types/babel__traverse": "npm:7.20.5"
-    "@types/mvdan-sh": "npm:0.10.9"
-    "@types/node": "npm:20.11.30"
-    "@types/yargs": "npm:17.0.32"
-    chalk: "npm:4.1.2"
-    cosmiconfig: "npm:9.0.0"
-    glob: "npm:10.3.10"
-    mvdan-sh: "npm:0.10.1"
-    yaml: "npm:2.4.1"
-    yargs: "npm:17.7.2"
-  bin:
-    depschecker: ./cli.js
-  languageName: unknown
-  linkType: soft
-
-"@depschecker/project-graph@workspace:*, @depschecker/project-graph@workspace:packages/project-graph":
-  version: 0.0.0-use.local
-  resolution: "@depschecker/project-graph@workspace:packages/project-graph"
-  dependencies:
-    "@depschecker/tsconfig": "workspace:*"
-    "@types/node": "npm:20.11.30"
-    glob: "npm:10.3.10"
-  languageName: unknown
-  linkType: soft
-
 "@depschecker/tsconfig@workspace:*, @depschecker/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@depschecker/tsconfig@workspace:packages/tsconfig"
@@ -1196,16 +1162,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"depschecker@workspace:.":
+"depschecker@workspace:*, depschecker@workspace:packages/depschecker":
   version: 0.0.0-use.local
-  resolution: "depschecker@workspace:."
+  resolution: "depschecker@workspace:packages/depschecker"
   dependencies:
-    "@depschecker/depschecker": "workspace:*"
-    eslint: "npm:8.57.0"
-    prettier: "npm:3.2.5"
-    tsup: "npm:8.0.2"
-    typescript: "npm:5.4.3"
-    typescript-eslint: "npm:7.3.1"
+    "@babel/parser": "npm:7.24.1"
+    "@babel/traverse": "npm:7.24.1"
+    "@babel/types": "npm:7.24.0"
+    "@depschecker/tsconfig": "workspace:*"
+    "@types/babel__traverse": "npm:7.20.5"
+    "@types/mvdan-sh": "npm:0.10.9"
+    "@types/node": "npm:20.11.30"
+    "@types/yargs": "npm:17.0.32"
+    chalk: "npm:4.1.2"
+    cosmiconfig: "npm:9.0.0"
+    glob: "npm:10.3.10"
+    mvdan-sh: "npm:0.10.1"
+    project-graph: "workspace:*"
+    yaml: "npm:2.4.1"
+    yargs: "npm:17.7.2"
+  bin:
+    depschecker: ./cli.js
   languageName: unknown
   linkType: soft
 
@@ -2552,6 +2529,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"project-graph@workspace:*, project-graph@workspace:packages/project-graph":
+  version: 0.0.0-use.local
+  resolution: "project-graph@workspace:packages/project-graph"
+  dependencies:
+    "@depschecker/tsconfig": "workspace:*"
+    "@types/node": "npm:20.11.30"
+    glob: "npm:10.3.10"
+  languageName: unknown
+  linkType: soft
+
 "promise-retry@npm:^2.0.1":
   version: 2.0.1
   resolution: "promise-retry@npm:2.0.1"
@@ -2687,6 +2674,19 @@ __metadata:
   checksum: 10c0/9a2f0bff3627ff5e6b539b3f0b1a3b74f4d7bb142530b5db11f2115b3df4a6bfe0ccfab0c2d3907ff9567f8c90ddc6d05f5194823bc401a590b4f839873f7d75
   languageName: node
   linkType: hard
+
+"root@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "root@workspace:."
+  dependencies:
+    depschecker: "workspace:*"
+    eslint: "npm:8.57.0"
+    prettier: "npm:3.2.5"
+    tsup: "npm:8.0.2"
+    typescript: "npm:5.4.3"
+    typescript-eslint: "npm:7.3.1"
+  languageName: unknown
+  linkType: soft
 
 "run-parallel@npm:^1.1.9":
   version: 1.2.0

@@ -1,6 +1,6 @@
-const { defaultConfig } = require('@depschecker/depschecker')
+const { defaultConfig } = require('depschecker')
 
-/** @type {import('@depschecker/depschecker').RcConfig} */
+/** @type {import('depschecker').RcConfig} */
 const config = {
   ignoreFolders: defaultConfig.ignoreFolders.concat(['dist', '.vscode']),
   parsers: [

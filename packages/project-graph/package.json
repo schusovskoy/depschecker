@@ -17,7 +17,7 @@
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "name": "@depschecker/project-graph",
+  "name": "project-graph",
   "scripts": {
     "build": "npx tsup src/index.ts --dts --format cjs,esm"
   },

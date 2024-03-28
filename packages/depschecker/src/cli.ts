@@ -1,4 +1,4 @@
-import { generateProjectGraph, getPackage } from '@depschecker/project-graph'
+import { generateProjectGraph, getPackage } from 'project-graph'
 import { getDepFilesMap } from './getDepFilesMap'
 import path from 'path'
 import { dedup, getDepsConfig, subtract } from './utils'

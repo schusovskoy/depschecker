@@ -1,4 +1,4 @@
-import type { Package } from '@depschecker/project-graph'
+import type { Package } from 'project-graph'
 
 export const dedup = <T>(arr: T[]): T[] => [...new Set(arr)]
 
