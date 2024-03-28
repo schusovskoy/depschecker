@@ -2,7 +2,16 @@
 
 I developed this utility as part of my role in one of my previous companies. It was used to verify workspace dependencies in a large monorepo within a CI pipeline. The utility ensures that a package contains all necessary dependencies, which could be utilized in source files, configurations, shell scripts, etc.
 
-The execution flow is as follows: parse CLI arguments → compile a list of packages to check → verify peerDependencies requirements → read package files → use a transformers pipeline to convert file content to AST → use parsers to find dependencies → check for unused or unspecified dependencies → generate a report.
+The execution flow is as follows:
+
+1. Parse CLI arguments
+1. Compile a list of packages to check
+1. Verify peerDependencies requirements
+1. Read package files
+1. Use a transformers pipeline to convert file content to AST
+1. Use parsers to find dependencies
+1. Check for unused or unspecified dependencies
+1. Generate a report
 
 This utility is designed for configurability and extendability. You can create new transformers and parsers and utilize configuration files, as shown in the example below.
 
