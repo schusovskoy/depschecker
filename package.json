@@ -1,5 +1,21 @@
 {
+  "depschecker": {
+    "ignoreUnmet": {
+      "tsup": [
+        "@swc/core",
+        "@microsoft/api-extractor",
+        "postcss"
+      ]
+    },
+    "ignoreUnspecified": [
+      "@eslint/js"
+    ],
+    "ignoreUnused": [
+      "prettier"
+    ]
+  },
   "devDependencies": {
+    "@depschecker/depschecker": "workspace:*",
     "eslint": "8.57.0",
     "prettier": "3.2.5",
     "tsup": "8.0.2",

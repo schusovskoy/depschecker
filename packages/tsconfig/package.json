@@ -2,6 +2,11 @@
   "dependencies": {
     "@tsconfig/strictest": "2.0.4"
   },
+  "depschecker": {
+    "rootDependencies": [
+      "typescript"
+    ]
+  },
   "name": "@depschecker/tsconfig",
   "packageManager": "yarn@4.1.1"
 }

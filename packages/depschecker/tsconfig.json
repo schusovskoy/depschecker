@@ -1,0 +1,4 @@
+{
+  "extends": "@depschecker/tsconfig/tsconfig.json",
+  "include": ["./src/**/*"]
+}

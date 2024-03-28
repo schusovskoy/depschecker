@@ -1,0 +1,38 @@
+{
+  "bin": "./cli.js",
+  "dependencies": {
+    "@babel/parser": "7.24.1",
+    "@babel/traverse": "7.24.1",
+    "@babel/types": "7.24.0",
+    "@depschecker/project-graph": "workspace:*",
+    "chalk": "4.1.2",
+    "cosmiconfig": "9.0.0",
+    "glob": "10.3.10",
+    "mvdan-sh": "0.10.1",
+    "yaml": "2.4.1",
+    "yargs": "17.7.2"
+  },
+  "depschecker": {
+    "ignoreUnused": [
+      "@types/node"
+    ],
+    "rootDependencies": [
+      "typescript",
+      "tsup"
+    ]
+  },
+  "devDependencies": {
+    "@depschecker/tsconfig": "workspace:*",
+    "@types/babel__traverse": "7.20.5",
+    "@types/mvdan-sh": "0.10.9",
+    "@types/node": "20.11.30",
+    "@types/yargs": "17.0.32"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "name": "@depschecker/depschecker",
+  "scripts": {
+    "build": "npx tsup --entry src/index.ts --entry src/cli.ts --format cjs,esm --dts"
+  },
+  "types": "dist/index.d.ts"
+}

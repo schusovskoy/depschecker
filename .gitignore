@@ -9,6 +9,7 @@ node_modules
 
 # Misc
 .DS_Store
+sandbox.ipynb
 
 # Generated
 dist

@@ -2,6 +2,15 @@
   "dependencies": {
     "glob": "10.3.10"
   },
+  "depschecker": {
+    "ignoreUnused": [
+      "@types/node"
+    ],
+    "rootDependencies": [
+      "typescript",
+      "tsup"
+    ]
+  },
   "devDependencies": {
     "@depschecker/tsconfig": "workspace:*",
     "@types/node": "20.11.30"
